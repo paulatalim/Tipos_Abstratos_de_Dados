@@ -8,57 +8,58 @@ private:
     int array[10];
 
 public:
+
     //Construtor
-    void Pilha () {
-        this.n = 0;
+    Pilha () {
+        this->n = 0;
     }
 
     //Metodos setting
-     void setN (int n) throws Exception {
-        if (n >= array.length) {
-            throw new Exception ("Erro");
-        }
+     void setN (int n) {
+        // if (n >= array.length) {
+        //     throw new Exception ("Erro");
+        // }
         
-        this.n = n;
+        this->n = n;
     }
 
-   void setArray (int pos, int num) throws Exception {
-        if (pos < 0 || pos >= n) {
-            throw new Exception ("Erro");
-        }
+   void setArray (int pos, int num) {
+        // if (pos < 0 || pos >= n) {
+        //     throw new Exception ("Erro");
+        // }
 		
-		this.array[pos] = num;
+		this->array[pos] = num;
 	}
 	
 	//Metodo getting
 	int getN () {
-		return this.n;
+		return this->n;
 	}
 
-	int getArrayElemento (int pos) throws Exception {
-        if (pos < 0 || pos >= n) {
-            throw new Exception ("Erro");
-        }
+	int getArrayElemento (int pos) {
+        // if (pos < 0 || pos >= n) {
+        //     throw new Exception ("Erro");
+        // }
 
-		return this.array[pos];		
+		return this->array[pos];		
 	}
     
-    void inserir (int num) throws Exception {
-		if (n >= array.length) {
-			throw new Exception ("Erro");
-		}
+    void inserir (int num) {
+		// if (n >= array.length) {
+		// 	throw new Exception ("Erro");
+		// }
 		
-        this.array[this.n] = num;
-        this.n++;
+        this->array[this->n] = num;
+        this->n++;
     }
 
-    int remover () throws Exception {
-		if (this.n == 0) {
-			throw new Exception ("Erro");
-		}
+    int remover () {
+		// if (this.n == 0) {
+		// 	throw new Exception ("Erro");
+		// }
 
-        this.n--;
-        return this.array[n];
+        n--;
+        return array[n];
     }
 
     /*
@@ -68,11 +69,11 @@ public:
 	void exibir () {
 		printf("[ ");
 		if (n != 0) {
-			for (int i = 0; i < this.n-1; i++) {
-				printf(this.array[i] + ", ");
+			for (int i = 0; i < n-1; i++) {
+				printf(array[i] + ", ");
 			}
-			printf(this.array[this.n-1]);
+			printf(array[n-1]);
 		}
 		printf(" ]\n");
 	}
-}
+};
