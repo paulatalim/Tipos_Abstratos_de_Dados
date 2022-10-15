@@ -67,13 +67,15 @@ public:
     * Parametro: um vetor de inteiros (vetor a ser exibido)
     */
 	void exibir () {
-		printf("[ ");
+		cout << "[ ";
+
 		if (n != 0) {
 			for (int i = 0; i < n-1; i++) {
-				printf(array[i] + ", ");
+				cout << array[i] << ", ";
 			}
-			printf(array[n-1]);
+			cout << array[n-1];
 		}
-		printf(" ]\n");
+        
+		cout << " ]" << endl;
 	}
 };
