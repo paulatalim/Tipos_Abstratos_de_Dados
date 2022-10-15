@@ -1,18 +1,20 @@
 #include <iostream>
 
+using namespace std;
 
-public class Pilha {
-    private int n;
-    private int[] array;
+class Pilha {
+private:
+    int n;
+    int array[10];
 
+public:
     //Construtor
-    public Pilha (int tam) {
+    void Pilha () {
         this.n = 0;
-        this.array = new int[tam];
     }
 
     //Metodos setting
-    public void setN (int n) throws Exception {
+     void setN (int n) throws Exception {
         if (n >= array.length) {
             throw new Exception ("Erro");
         }
@@ -20,7 +22,7 @@ public class Pilha {
         this.n = n;
     }
 
-    public void setArray (int pos, int num) throws Exception {
+   void setArray (int pos, int num) throws Exception {
         if (pos < 0 || pos >= n) {
             throw new Exception ("Erro");
         }
@@ -29,11 +31,11 @@ public class Pilha {
 	}
 	
 	//Metodo getting
-	public int getN () {
+	int getN () {
 		return this.n;
 	}
 
-	public int getArrayElemento (int pos) throws Exception {
+	int getArrayElemento (int pos) throws Exception {
         if (pos < 0 || pos >= n) {
             throw new Exception ("Erro");
         }
@@ -41,7 +43,7 @@ public class Pilha {
 		return this.array[pos];		
 	}
     
-    public void inserir (int num) throws Exception {
+    void inserir (int num) throws Exception {
 		if (n >= array.length) {
 			throw new Exception ("Erro");
 		}
@@ -50,7 +52,7 @@ public class Pilha {
         this.n++;
     }
 
-    public int remover () throws Exception {
+    int remover () throws Exception {
 		if (this.n == 0) {
 			throw new Exception ("Erro");
 		}
@@ -63,14 +65,14 @@ public class Pilha {
     * Descricao: essa funcao exibe os numeros de um vetor de inteiros
     * Parametro: um vetor de inteiros (vetor a ser exibido)
     */
-	public void exibir () {
-		System.out.print("[ ");
+	void exibir () {
+		printf("[ ");
 		if (n != 0) {
 			for (int i = 0; i < this.n-1; i++) {
-				System.out.print(this.array[i] + ", ");
+				printf(this.array[i] + ", ");
 			}
-			System.out.print(this.array[this.n-1]);
+			printf(this.array[this.n-1]);
 		}
-		System.out.println(" ]");
+		printf(" ]\n");
 	}
 }
