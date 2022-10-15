@@ -15,7 +15,7 @@ public:
     }
 
     //Metodos setting
-     void setN (int n) {
+    void setN (int n) {
         // if (n >= array.length) {
         //     throw new Exception ("Erro");
         // }
@@ -23,7 +23,7 @@ public:
         this->n = n;
     }
 
-   void setArray (int pos, int num) {
+    void setArray (int pos, int num) {
         // if (pos < 0 || pos >= n) {
         //     throw new Exception ("Erro");
         // }
@@ -75,7 +75,7 @@ public:
 			}
 			cout << array[n-1];
 		}
-        
+
 		cout << " ]" << endl;
 	}
 };
