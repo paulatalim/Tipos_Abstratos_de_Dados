@@ -1,5 +1,6 @@
 #include <iostream>
 
+using namespace std;
 
 class Lista {
 private:
@@ -94,12 +95,12 @@ public:
      * Parametro: um vetor de inteiros (vetor a ser exibido)
      */
 	void exibir () {
-		print ("[ ");
+		cout << "[ ";
 		if (n != 0) {
 			for (int i = 0; i < n-1; i++) {
-				print (array[i] + ", ");
+				cout << array[i] << ", ";
 			}
-			println (array[n-1] + " ]");
+			cout << array[n-1] << " ]" << endl;
 		}
 	}
-}
+};
