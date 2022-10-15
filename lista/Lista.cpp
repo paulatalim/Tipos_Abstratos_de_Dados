@@ -1,116 +1,89 @@
 #include <iostream>
 
 
-public class Lista {
-	private int n;
-	private int[] array;
+class Lista {
+private:
+    int n;
+	int array[10];
 	
+public:
 	//Construtor
-	public Lista (int tam) {
-		this.n = 0;
-		array = new int[tam];
+	Lista () {
+		n = 0;
 	}
 	
 	//Metodo setting
-	public void setN (int n) {
-		this.n = n;
+	void setN (int n) {
+		this->n = n;
 	}
 
-	public void setArray (int pos, int num) {
+	void setArray (int pos, int num) {
 		if (pos < n - 1) {
-			this.array[pos] = num;
+			this->array[pos] = num;
 		}
 	}
 	
 	//Metodo getting
-	public int getN () {
-		return this.n;
+	int getN () {
+		return this->n;
 	}
 
-	public int getArrayElemento (int pos) throws Exception {
-		if (pos >= n) {
-			throw new Exception("Erro");
-		}
-		
-		return this.array[pos];
+	int getArrayElemento (int pos) {
+		return this->array[pos];
 	}
 	
-	public void inserirInicio (int num) throws Exception {
-		if (n >= array.length) {
-			throw new Exception ("Erro");
-		}
-
-		for (int i = this.n; i > 0; i--) {
+	void inserirInicio (int num) {
+		for (int i = n; i > 0; i--) {
 			array[i] = array[i-1];
 		}
 		
 		//Atualizacao do limite do vetor
-		this.n++;
+		this->n++;
 		
 		//Insercao do novo num
-		this.array[0] = num;
+		this->array[0] = num;
 	}
 	
-	public void inserirFinal (int num) throws Exception {
-		if (n >= array.length) {
-			throw new Exception ("Erro");
-		}
-
-		this.array[this.n++] = num;
+	void inserirFinal (int num) {
+		array[n++] = num;
 	}
 	
-	public void inserir (int pos, int num) throws Exception {
-		if (n >= array.length || pos < 0 || pos > this.n) {
-			throw new Exception ("Erro");
-		}
-
-		for (int i = this.n; i > pos; i--) {
-			this.array[i] = this.array[i-1];
+	void inserir (int pos, int num) {
+		for (int i = n; i > pos; i--) {
+			array[i] = array[i-1];
 		}
 		
 		//Atualizacao do limite do vetor
-		this.n++;
+		n++;
 		
 		//Insercao do novo num
-		this.array[pos] = num;
+		array[pos] = num;
 	}
 	
-	public int removerInicio () throws Exception {
-		int num_removido = this.array[0];
+	int removerInicio () {
+		int num_removido = array[0];
 
-		if (n == 0) {
-			throw new Exception ("Erro");
-		}
+		n--;
 
-		this.n--;
-
-		for (int i = 0; i < this.n; i++) {
-			this.array[i] = this.array [i+1];
+		for (int i = 0; i < n; i++) {
+			array[i] = array [i+1];
 		}
 		
 		return num_removido;
 	}
 	
-	public int removerFinal () throws Exception {
-		if (this.n == 0) {
-			throw new Exception ("Erro");
-		}
-
-		this.n--;
-		return this.array[this.n];
+	int removerFinal ()  {
+		n--;
+		return array[n];
 	}
 
-	public int remover (int pos) throws Exception {
-		int num_removido = this.array[pos];
+	int remover (int pos)  {
+		int num_removido = array[pos];
 
-		if (this.n == 0 || pos < 0 || pos > this.n) {
-			throw new Exception ("Erro");
-		}
-		
-		this.n--;
+		n--;
 
-		for (int i = pos; i < this.n; i++) {
-			this.array[i] = this.array [i+1];
+		for (int i = pos; i < n; i++) {
+			array[i] = array [i+1];
 		}
 
 		return num_removido;
@@ -120,13 +93,13 @@ public class Lista {
      * Descricao: essa funcao exibe os numeros de um vetor de inteiros
      * Parametro: um vetor de inteiros (vetor a ser exibido)
      */
-	public void exibir () throws Exception {
-		System.out.print ("[ ");
-		if (this.n != 0) {
-			for (int i = 0; i < this.n-1; i++) {
-				System.out.print (this.array[i] + ", ");
+	void exibir () {
+		print ("[ ");
+		if (n != 0) {
+			for (int i = 0; i < n-1; i++) {
+				print (array[i] + ", ");
 			}
-			System.out.println (this.array[this.n-1] + " ]");
+			println (array[n-1] + " ]");
 		}
 	}
 }
