@@ -8,9 +8,10 @@ public class FilaDinamica {
     //construtor
     public FilaDinamica () {
         prim = new Celula();
-        prim.elemento=0;
-        ult=prim;
-        tamanho=0;
+        prim.elemento = 0;
+        prim.prox = null;
+        ult = prim;
+        tamanho = 0;
     }
 
     //destrutor
@@ -51,7 +52,6 @@ public class FilaDinamica {
             System.out.printf("%d", aux.elemento);
             aux = aux.prox;
         }
-        aux = null;
     }
 
     public int getTamanho () {
