@@ -53,8 +53,11 @@ public class FilaDinamica {
         }
         aux = null;
     }
+
+    int getTamanho () {
+        return tamanho;
+    }
     /*
-    int mostrarTamanho
     bool vazia
     s*/
 }
