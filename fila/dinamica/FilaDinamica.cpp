@@ -30,6 +30,7 @@ public:
             prim = prim->prox;
             delete(aux);
         }
+        tamanho = 0;
     }
 
     void enfileirar (int x) {
@@ -53,17 +54,54 @@ public:
     }
 
     void mostrarFila () {
-        Celula *aux;
-        while (prim != NULL) {
-            aux = prim;
+        Celula *aux = prim;
+        while (aux != NULL) {
             printf("%d", aux->elemento);
             aux = aux->prox;
         }
         aux = NULL;
     }
-    /*
-    int mostrarTamanho
-    bool vazia
-*/
 
+    void setElemento (int pos, int num) {
+        if (pos < 0 || pos >= tamanho) {
+            exit(0);
+        }
+
+        Celula *aux = prim;
+        int index = 0;
+
+        while (index!= pos) {
+            aux = aux->prox;
+            index++;
+        }
+
+        aux->elemento = num;
+    }
+
+    int getElemento (int pos) {
+        if (pos < 0 || pos >= tamanho) {
+            exit(0);
+        }
+
+        Celula *aux = prim;
+        int index = 0;
+
+        while (index!= pos) {
+            aux = aux->prox;
+            index++;
+        }
+        
+        return aux->elemento;
+    }
+
+    int getTamanho () {
+        return tamanho;
+    }
+
+    bool fila_vazia () {
+        if (prim == ult) {
+            return true;
+        }
+        return false;
+    }
 };

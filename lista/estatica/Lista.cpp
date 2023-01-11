@@ -14,12 +14,8 @@ public:
 	}
 	
 	//Metodo setting
-	void setN (int n) {
-		this->n = n;
-	}
-
 	void setArray (int pos, int num) {
-		if (pos < n - 1) {
+		if (pos < n - 1 && pos >= 0) {
 			this->array[pos] = num;
 		}
 	}
@@ -30,6 +26,9 @@ public:
 	}
 
 	int getArrayElemento (int pos) {
+		if(pos < 0 && pos >= n) {
+			exit(0);
+		}
 		return this->array[pos];
 	}
 	

@@ -2,7 +2,7 @@ public class Fila {
     private int n;
     private int[] array;
 
-    //Construtores
+    //Construtor
     public Fila (int tam) {
         this.n = 0;
         this.array = new int[tam]; 
