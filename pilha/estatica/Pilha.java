@@ -8,15 +8,6 @@ public class Pilha {
         this.array = new int[tam];
     }
 
-    //Metodos setting
-    public void setN (int n) throws Exception {
-        if (n >= array.length) {
-            throw new Exception ("Erro");
-        }
-        
-        this.n = n;
-    }
-
     public void setArray (int pos, int num) throws Exception {
         if (pos < 0 || pos >= n) {
             throw new Exception ("Erro");

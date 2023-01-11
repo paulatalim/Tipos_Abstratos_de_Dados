@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "*.js": "javascript",
-        "*.java": "java",
-        "array": "c"
-    }
-}

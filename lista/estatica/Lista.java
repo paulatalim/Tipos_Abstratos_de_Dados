@@ -9,22 +9,18 @@ public class Lista {
 	}
 	
 	//Metodo setting
-	public void setN (int n) {
-		this.n = n;
-	}
-
 	public void setArray (int pos, int num) {
-		if (pos < n - 1) {
+		if (pos < n && pos >= 0) {
 			this.array[pos] = num;
 		}
 	}
 	
 	//Metodo getting
-	public int getN () {
+	public int getTamanho () {
 		return this.n;
 	}
 
-	public int getArrayElemento (int pos) throws Exception {
+	public int getElemento (int pos) throws Exception {
 		if (pos >= n) {
 			throw new Exception("Erro");
 		}

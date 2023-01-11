@@ -4,7 +4,7 @@ public class FilaDinamica {
     private int tamanho;
     
     //construtor
-    public FilaDinamica () {
+    FilaDinamica () {
         prim = new Celula();
         prim.elemento = 0;
         prim.prox = null;
@@ -13,7 +13,7 @@ public class FilaDinamica {
     }
 
     //destrutor
-    // public ~FilaDinamica () {
+    // ~FilaDinamica () {
     //     Celula aux;
     //     while (prim != null) {
     //         aux = prim;
@@ -30,7 +30,7 @@ public class FilaDinamica {
         tamanho++;
     }
 
-    public int remover () throws Exception{
+    public int remover () throws Exception {
         if (prim.prox == null) {
             throw new Exception("Erro");
         }
@@ -50,6 +50,39 @@ public class FilaDinamica {
             System.out.printf("%d", aux.elemento);
             aux = aux.prox;
         }
+    }
+
+    public void setElemento (int pos, int num) throws Exception {
+        if (pos < 0 || pos >= tamanho) {
+            throw new Exception("Erro");
+        }
+
+        Celula aux = prim;
+        int index = 0;
+
+        while (index != pos) {
+            aux = aux.prox;
+            index++;
+        }
+
+        aux.elemento = num;
+        aux = null;
+    }
+
+    public int getElemento (int pos) throws Exception {
+        if (pos < 0 || pos >= tamanho) {
+            throw new Exception("Erro");
+        }
+
+        Celula aux = prim;
+        int index = 0;
+
+        while (index != pos) {
+            aux = aux.prox;
+            index ++;
+        }
+
+        return aux.elemento;
     }
 
     public int getTamanho () {
