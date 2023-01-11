@@ -4,9 +4,9 @@
 
 ### Pilha Estática
 
-- C
-- C++
-- Java
+- [C](./estatica/pilha.c)
+- [C++](./estatica/pilha.cpp)
+- [Java](./estatica/Pilha.java)
 
 ### Pilha Dinâmica
 

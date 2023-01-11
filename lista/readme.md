@@ -5,10 +5,15 @@
 ### Lista Estática
 
 - C
-- C++
+- [C++](./estatica/Lista.cpp)
+- [Java](./estatica/Lista.java)
+
+### Lista Dinâmica Simples
+
+- [C++](./dinamica/ListaSimples.cpp)
 - Java
 
-### Lista Dinâmica
+### Lista Dinâmica Duplamente encadeada
 
 - C++
 - Java

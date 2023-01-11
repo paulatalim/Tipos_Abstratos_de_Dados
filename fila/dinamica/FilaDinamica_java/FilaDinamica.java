@@ -1,5 +1,3 @@
-package FilaDinamica_java;
-
 public class FilaDinamica {    
     private Celula prim;
     private Celula ult;

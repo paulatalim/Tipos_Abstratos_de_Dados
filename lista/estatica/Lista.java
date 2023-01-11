@@ -1,4 +1,3 @@
-
 public class Lista {
 	private int n;
 	private int[] array;
