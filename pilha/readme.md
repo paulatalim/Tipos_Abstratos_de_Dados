@@ -10,5 +10,5 @@
 
 ### Pilha Dinâmica
 
-- C++
-- Java
+- C++ (em breve)
+- [Java](./dinamica/java)

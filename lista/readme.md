@@ -16,4 +16,4 @@
 ### Lista Dinâmica Duplamente encadeada
 
 - C++
-- Java
+- [Java](./dinamica/listaDuplaJava)
