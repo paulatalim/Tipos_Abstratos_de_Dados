@@ -1,22 +1,34 @@
 # Lista
 
-## Códigos disponíveis
 
-### Lista Estática
 
+## Lista Estática
+
+### Códigos disponíveis
 - C (em breve)
 - [C++](./estatica/Lista.cpp)
 - [Java](./estatica/Lista.java)
 
-### Lista Dinâmica Simples
+## Lista Dinâmica Simples
 
+### Códigos disponíveis
 - [C++](./dinamica/ListaSimples.cpp)
 - Java (em breve)
 
-### Lista Dinâmica Duplamente encadeada
+### Metodos Exclusivos
+- Destrutor Lista (disponível apena na lista simples em cpp)
+
+## Lista Dinâmica Duplamente encadeada
+
+### Códigos disponíveis
 
 - C++ (em breve)
 - [Java](./dinamica/listaDuplaJava)
+
+### Metodos Exclusivos
+
+- mostrar_prim_ult ()
+- mostrar_ult_prim ()
 
 ## Métodos disponiveis nas classes
 
@@ -28,12 +40,7 @@
 - removerFim ()
 - remover (int pos)
 - exibir ()
-- setElemento ()
-- getElemento ()
+- setElemento (int num, int pos)
+- getElemento (int pos)
 - getTamanho ()
 - lista_vazia ()
-- Destrutor Lista (disponível apena na lista simples em cpp)
-
-## Metodos exclusivos da Lista dupla
-- mostrar_prim_ult ()
-- mostrar_ult_prim
