@@ -1,7 +1,5 @@
 # Lista
 
-
-
 ## Lista Estática
 
 ### Códigos disponíveis
@@ -14,9 +12,6 @@
 ### Códigos disponíveis
 - [C++](./dinamica/ListaSimples.cpp)
 - Java (em breve)
-
-### Metodos Exclusivos
-- `~Lista` - destrutor
 
 ## Lista Dinâmica Duplamente encadeada
 
@@ -44,3 +39,6 @@
 - `getElemento (int pos)`
 - `getTamanho ()`
 - `lista_vazia ()`
+
+### Metodo Exclusivos dos Arquivos C++
+- `~Lista` - destrutor
