@@ -13,13 +13,6 @@ private:
     Celula *ult;
     int tamanho;
 
-    int calculo_soma_recursiva (Celula *endereco_elemento) {
-        if (endereco_elemento->prox != NULL) {
-            return endereco_elemento->elemento + calculo_soma_recursiva (endereco_elemento->prox);
-        }
-        return 0;
-    }
-
 public:
     //construtor
     Lista () {
@@ -173,22 +166,4 @@ public:
         }
         return false;
     }
-
-    int soma_interativa () {
-        Celula *aux = prim->prox;
-        int soma = 0;
-
-        while (aux->prox != NULL) {
-            soma += aux->elemento;
-            aux = aux->prox;
-        }
-
-        aux = NULL;
-        return soma;
-    }
-
-    int soma_recursiva () {
-        return calculo_soma_recursiva(prim->prox);
-    }
-
 };

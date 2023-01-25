@@ -17,3 +17,21 @@
 
 - C++ (em breve)
 - [Java](./dinamica/listaDuplaJava)
+
+## Métodos disponiveis nas classes
+
+- Lista () 
+- inserirInicio (int num)
+- inserirFim (int num)
+- inserir (int num, int pos)
+- removerInicio ()
+- removerFim ()
+- remover (int pos)
+- mostrar ()
+- getTamanho ()
+- lista_vazia ()
+- Destrutor Lista (disponível apena na lista simples em cpp)
+
+## Metodos exclusivos da Lista dupla
+- mostrar_prim_ult ()
+- mostrar_ult_prim

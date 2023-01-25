@@ -1,11 +1,11 @@
 
-public class ListaDupla {
+public class Lista {
 	private CelulaDupla prim;
 	private CelulaDupla ult;
 	private int tamanho;
 	
 	//Construtor
-	ListaDupla () {
+	Lista () {
 		prim = new CelulaDupla ();
 		ult = prim;
 		tamanho = 0;
@@ -37,6 +37,32 @@ public class ListaDupla {
 		ult = aux;
 		aux = null;
 		tamanho++;
+	}
+
+	public void inserir (int num, int pos) throws Exception {
+		if (pos < 0 || pos >= getTamanho()) {
+			throw new Exception("Erro, posicao incorreta");
+		} else if (pos == 0) {
+			inserirInicio(num);
+		} else if (pos == getTamanho()-1) {
+			inserirFim(num);
+		} else {
+			CelulaDupla novo = new CelulaDupla(num);
+			CelulaDupla aux = prim.prox;
+
+			int index = 0;
+
+			while (index != pos) {
+				aux = aux.prox;
+				index++;
+			}
+
+			novo.prox = aux;
+			novo.ant = aux.ant;
+			aux.ant.prox = novo;
+			aux.ant = novo;
+			tamanho++;
+		}
 	}
 
 	//Remove um elemento do inicio da lista
@@ -71,6 +97,35 @@ public class ListaDupla {
 		return retorno;
 	}
 
+	public int remover (int pos) throws Exception {
+		if (pos < 0 || pos >= getTamanho()) {
+			throw new Exception("Erro, posicao incorreta");
+		} else if (pos == 0) {
+			return removerInicio();
+		} else if (pos == getTamanho()-1) {
+			return removerFim();
+		}
+		
+		CelulaDupla aux = prim.prox;
+		int index = 0;
+
+		while (index != pos) {
+			aux = aux.prox;
+			index++;
+		}
+
+		int elemento = aux.elemento;
+
+		aux.ant.prox = aux.prox;
+		aux.prox.ant = aux.ant;
+		aux.prox = null;
+		aux.ant = null;
+		
+		tamanho --;
+
+		return elemento;
+	}
+
 	//Exibe os elementos do primeiro ao ultimo
 	public void mostrar_prim_ult () {
 		CelulaDupla aux = prim.prox;
@@ -95,13 +150,13 @@ public class ListaDupla {
 		System.out.println();
 	}
 
-	//Exibe o tamanho da lista
-	public void tamanho () {
-		System.out.println("Tamanho da lista: " + tamanho);
+	//Retorna o tamanho da lista
+	public int getTamanho () {
+		return tamanho;
 	}
 
 	//Verifica se a lista esta vazia
-	public boolean listaDVazia () {
+	public boolean lista_vazia () {
 		if (prim == ult) {
 			return true;
 		}
