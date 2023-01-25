@@ -16,7 +16,7 @@
 - Java (em breve)
 
 ### Metodos Exclusivos
-- Destrutor Lista (disponível apena na lista simples em cpp)
+- `~Lista` - destrutor
 
 ## Lista Dinâmica Duplamente encadeada
 
@@ -27,20 +27,20 @@
 
 ### Metodos Exclusivos
 
-- mostrar_prim_ult ()
-- mostrar_ult_prim ()
+- `mostrar_prim_ult ()`
+- `mostrar_ult_prim ()`
 
-## Métodos disponiveis nas classes
+## Métodos disponíveis nas classes
 
-- Lista () 
-- inserirInicio (int num)
-- inserirFim (int num)
-- inserir (int num, int pos)
-- removerInicio ()
-- removerFim ()
-- remover (int pos)
-- exibir ()
-- setElemento (int num, int pos)
-- getElemento (int pos)
-- getTamanho ()
-- lista_vazia ()
+- `Lista () `
+- `inserirInicio (int num)`
+- `inserirFim (int num)`
+- `inserir (int num, int pos)`
+- `removerInicio ()`
+- `removerFim ()`
+- `remover (int pos)`
+- `exibir ()`
+- `setElemento (int num, int pos)`
+- `getElemento (int pos)`
+- `getTamanho ()`
+- `lista_vazia ()`
