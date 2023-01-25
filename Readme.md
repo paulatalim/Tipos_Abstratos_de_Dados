@@ -1,9 +1,9 @@
 # Tipos Abstratos de Dados
 
-## Códigos disponiveis
-- Lista
-- Pilha
-- Fila
+## Códigos disponíveis
+- [Lista](./lista)
+- [Pilha](./pilha)
+- [Fila](./fila)
 
 ## Créditos
 Esse repositório foi feito com muito carinho por mim, Paula Talim, me acompanhe no:

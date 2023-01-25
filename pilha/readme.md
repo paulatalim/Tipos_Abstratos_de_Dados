@@ -1,6 +1,6 @@
 # Pilha
 
-## Códigos disponiveis
+## Códigos disponíveis
 
 ### Pilha Estática
 
