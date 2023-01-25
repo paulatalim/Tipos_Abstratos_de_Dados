@@ -156,6 +156,40 @@ public:
 
     }
 
+    void setElemento (int num, int pos) {
+        if (pos < 0 || pos > tamanho) {
+            cout << "Posicao invalida";
+            exit(0);
+        }
+
+        Celula *aux = prim->prox;
+        int cont = 0;
+
+        while (cont < pos) {
+            aux = aux->prox;
+            cont ++;
+        }
+
+        aux->elemento = num;
+    }
+
+    int getElemento (int pos) {
+        if (pos < 0 || pos > tamanho) {
+            cout << "Posicao invalida";
+            return -1;
+        }
+
+        Celula *aux = prim->prox;
+        int cont = 0;
+
+        while (cont < pos) {
+            aux = aux->prox;
+            cont ++;
+        }
+
+        return aux->elemento;
+    }
+
     int getTamanho () {
         return tamanho;
     }

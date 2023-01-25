@@ -18,13 +18,6 @@ public:
 		tamanho = 0;
 	}
 
-	//Metodo setting
-	void setArray (int pos, int num) {
-		if (pos < tamanho - 1 && pos >= 0) {
-			this->array[pos] = num;
-		}
-	}
-	
 	void inserirInicio (int num) {
 		for (int i = tamanho; i > 0; i--) {
 			array[i] = array[i-1];
@@ -96,12 +89,19 @@ public:
 		}
 	}
 
+	//Metodo setting
+	void setElemento (int pos, int num) {
+		if (pos < tamanho - 1 && pos >= 0) {
+			this->array[pos] = num;
+		}
+	}
+
 	//Metodo getting
 	int getTamanho () {
 		return this->tamanho;
 	}
 
-	int getArrayElemento (int pos) {
+	int getElemento (int pos) {
 		if(pos < 0 && pos >= tamanho) {
 			exit(0);
 		}

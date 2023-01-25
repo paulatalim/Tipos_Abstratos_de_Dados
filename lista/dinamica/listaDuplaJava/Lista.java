@@ -150,6 +150,39 @@ public class Lista {
 		System.out.println();
 	}
 
+	public void setElemento (int num, int pos) throws Exception {
+		if (pos < 0|| pos >= getTamanho()) {
+			throw new Exception("Erro, posicao invalida");
+		} else {
+			CelulaDupla aux = prim.prox;
+			int index = 0;
+
+			while (index != pos) {
+				aux = aux.prox;
+				index++;
+			}
+
+			aux.elemento = num;
+			aux = null;
+		}
+	}
+
+	public int getElemento (int pos) throws Exception {
+		if (pos < 0|| pos >= getTamanho()) {
+			throw new Exception("Erro, posicao invalida");
+		} else {
+			CelulaDupla aux = prim.prox;
+			int index = 0;
+
+			while (index != pos) {
+				aux = aux.prox;
+				index++;
+			}
+
+			return aux.elemento;
+		}
+	}
+
 	//Retorna o tamanho da lista
 	public int getTamanho () {
 		return tamanho;

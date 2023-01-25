@@ -104,7 +104,7 @@ public class Lista {
 	}
 
 	//Metodo setting
-	public void setArray (int pos, int num) {
+	public void setElemento (int pos, int num) {
 		if (pos < tamanho && pos >= 0) {
 			array[pos] = num;
 		}
