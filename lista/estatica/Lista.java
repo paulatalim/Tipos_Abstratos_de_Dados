@@ -1,109 +1,109 @@
 public class Lista {
-	private int n;
+	private int tamanho;
 	private int[] array;
 	
 	//Construtor
 	public Lista (int tam) {
-		this.n = 0;
+		tamanho = 0;
 		array = new int[tam];
 	}
 	
 	//Metodo setting
 	public void setArray (int pos, int num) {
-		if (pos < n && pos >= 0) {
-			this.array[pos] = num;
+		if (pos < tamanho && pos >= 0) {
+			array[pos] = num;
 		}
 	}
 	
 	//Metodo getting
 	public int getTamanho () {
-		return this.n;
+		return tamanho;
 	}
 
 	public int getElemento (int pos) throws Exception {
-		if (pos >= n) {
+		if (pos >= tamanho) {
 			throw new Exception("Erro");
 		}
 		
-		return this.array[pos];
+		return array[pos];
 	}
 	
 	public void inserirInicio (int num) throws Exception {
-		if (n >= array.length) {
+		if (tamanho >= array.length) {
 			throw new Exception ("Erro");
 		}
 
-		for (int i = this.n; i > 0; i--) {
+		for (int i = tamanho; i > 0; i--) {
 			array[i] = array[i-1];
 		}
 		
 		//Atualizacao do limite do vetor
-		this.n++;
+		tamanho++;
 		
 		//Insercao do novo num
-		this.array[0] = num;
+		array[0] = num;
 	}
 	
 	public void inserirFinal (int num) throws Exception {
-		if (n >= array.length) {
+		if (tamanho >= array.length) {
 			throw new Exception ("Erro");
 		}
 
-		this.array[this.n++] = num;
+		array[tamanho++] = num;
 	}
 	
 	public void inserir (int pos, int num) throws Exception {
-		if (n >= array.length || pos < 0 || pos > this.n) {
+		if (tamanho >= array.length || pos < 0 || pos > tamanho) {
 			throw new Exception ("Erro");
 		}
 
-		for (int i = this.n; i > pos; i--) {
-			this.array[i] = this.array[i-1];
+		for (int i = tamanho; i > pos; i--) {
+			array[i] = array[i-1];
 		}
 		
 		//Atualizacao do limite do vetor
-		this.n++;
+		tamanho++;
 		
 		//Insercao do novo num
-		this.array[pos] = num;
+		array[pos] = num;
 	}
 	
 	public int removerInicio () throws Exception {
-		int num_removido = this.array[0];
+		int num_removido = array[0];
 
-		if (n == 0) {
+		if (tamanho == 0) {
 			throw new Exception ("Erro");
 		}
 
-		this.n--;
+		tamanho--;
 
-		for (int i = 0; i < this.n; i++) {
-			this.array[i] = this.array [i+1];
+		for (int i = 0; i < tamanho; i++) {
+			array[i] = array [i+1];
 		}
 		
 		return num_removido;
 	}
 	
 	public int removerFinal () throws Exception {
-		if (this.n == 0) {
+		if (tamanho == 0) {
 			throw new Exception ("Erro");
 		}
 
-		this.n--;
-		return this.array[this.n];
+		tamanho--;
+		return array[tamanho];
 	}
 
 	public int remover (int pos) throws Exception {
-		int num_removido = this.array[pos];
+		int num_removido = array[pos];
 
-		if (this.n == 0 || pos < 0 || pos > this.n) {
+		if (tamanho == 0 || pos < 0 || pos > tamanho) {
 			throw new Exception ("Erro");
 		}
 		
-		this.n--;
+		tamanho--;
 
-		for (int i = pos; i < this.n; i++) {
-			this.array[i] = this.array [i+1];
+		for (int i = pos; i < tamanho; i++) {
+			array[i] = array [i+1];
 		}
 
 		return num_removido;
@@ -115,11 +115,11 @@ public class Lista {
      */
 	public void exibir () throws Exception {
 		System.out.print ("[ ");
-		if (this.n != 0) {
-			for (int i = 0; i < this.n-1; i++) {
-				System.out.print (this.array[i] + ", ");
+		if (tamanho != 0) {
+			for (int i = 0; i < tamanho-1; i++) {
+				System.out.print (array[i] + ", ");
 			}
-			System.out.println (this.array[this.n-1] + " ]");
+			System.out.println (array[tamanho-1] + " ]");
 		}
 	}
 }
