@@ -14,3 +14,16 @@
 
 - [C++](./dinamica/FilaDinamica.cpp)
 - [Java](./dinamica/FilaDinamica_java)
+
+## Métodos disponíveis
+- `Fila()`
+- `enfileirar (int x)`
+- `desenfileirar ()`
+- `exibir ()`
+- `setElemento (int pos, int num)`
+- `getElemento (int pos)`
+- `getTamanho ()`
+- `fila_vazia ()`
+
+### Métodos exclusivos do código em C++
+- `~Fila()` - destrutor

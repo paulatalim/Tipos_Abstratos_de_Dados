@@ -20,7 +20,7 @@
 - C++ (em breve)
 - [Java](./dinamica/listaDuplaJava)
 
-### Metodos Exclusivos
+### Métodos Exclusivos
 
 - `mostrar_prim_ult ()`
 - `mostrar_ult_prim ()`

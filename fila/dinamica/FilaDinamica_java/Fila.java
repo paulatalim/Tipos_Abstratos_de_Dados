@@ -1,10 +1,10 @@
-public class FilaDinamica {    
+public class Fila {    
     private Celula prim;
     private Celula ult;
     private int tamanho;
     
     //construtor
-    FilaDinamica () {
+    Fila () {
         prim = new Celula();
         prim.elemento = 0;
         prim.prox = null;
@@ -79,7 +79,7 @@ public class FilaDinamica {
         return tamanho;
     }
 
-    public boolean vazia () {
+    public boolean fila_vazia () {
         if (tamanho == 0) {
             return true;
         }
