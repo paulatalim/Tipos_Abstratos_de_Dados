@@ -8,26 +8,6 @@ public class Lista {
 		array = new int[tam];
 	}
 	
-	//Metodo setting
-	public void setArray (int pos, int num) {
-		if (pos < tamanho && pos >= 0) {
-			array[pos] = num;
-		}
-	}
-	
-	//Metodo getting
-	public int getTamanho () {
-		return tamanho;
-	}
-
-	public int getElemento (int pos) throws Exception {
-		if (pos >= tamanho) {
-			throw new Exception("Erro");
-		}
-		
-		return array[pos];
-	}
-	
 	public void inserirInicio (int num) throws Exception {
 		if (tamanho >= array.length) {
 			throw new Exception ("Erro");
@@ -44,7 +24,7 @@ public class Lista {
 		array[0] = num;
 	}
 	
-	public void inserirFinal (int num) throws Exception {
+	public void inserirFim (int num) throws Exception {
 		if (tamanho >= array.length) {
 			throw new Exception ("Erro");
 		}
@@ -52,7 +32,7 @@ public class Lista {
 		array[tamanho++] = num;
 	}
 	
-	public void inserir (int pos, int num) throws Exception {
+	public void inserir (int num, int pos) throws Exception {
 		if (tamanho >= array.length || pos < 0 || pos > tamanho) {
 			throw new Exception ("Erro");
 		}
@@ -84,7 +64,7 @@ public class Lista {
 		return num_removido;
 	}
 	
-	public int removerFinal () throws Exception {
+	public int removerFim () throws Exception {
 		if (tamanho == 0) {
 			throw new Exception ("Erro");
 		}
@@ -121,5 +101,32 @@ public class Lista {
 			}
 			System.out.println (array[tamanho-1] + " ]");
 		}
+	}
+
+	//Metodo setting
+	public void setArray (int pos, int num) {
+		if (pos < tamanho && pos >= 0) {
+			array[pos] = num;
+		}
+	}
+	
+	//Metodo getting
+	public int getTamanho () {
+		return tamanho;
+	}
+
+	public int getElemento (int pos) throws Exception {
+		if (pos >= tamanho) {
+			throw new Exception("Erro");
+		}
+		
+		return array[pos];
+	}
+
+	public boolean lista_vazia () {
+		if (tamanho == 0) {
+			return true;
+		}
+		return false;
 	}
 }
