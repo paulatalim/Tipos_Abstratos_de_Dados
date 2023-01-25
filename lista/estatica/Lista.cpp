@@ -13,23 +13,16 @@ public:
 		tamanho = 0;
 	}
 	
+	//Destrutor
+	~Lista () {
+		tamanho = 0;
+	}
+
 	//Metodo setting
 	void setArray (int pos, int num) {
 		if (pos < tamanho - 1 && pos >= 0) {
 			this->array[pos] = num;
 		}
-	}
-	
-	//Metodo getting
-	int getTamanho () {
-		return this->tamanho;
-	}
-
-	int getArrayElemento (int pos) {
-		if(pos < 0 && pos >= tamanho) {
-			exit(0);
-		}
-		return this->array[pos];
 	}
 	
 	void inserirInicio (int num) {
@@ -44,7 +37,7 @@ public:
 		array[0] = num;
 	}
 	
-	void inserirFinal (int num) {
+	void inserirFim (int num) {
 		array[tamanho++] = num;
 	}
 	
@@ -72,7 +65,7 @@ public:
 		return num_removido;
 	}
 	
-	int removerFinal ()  {
+	int removerFim ()  {
 		tamanho--;
 		return array[tamanho];
 	}
@@ -101,5 +94,25 @@ public:
 			}
 			cout << array[tamanho-1] << " ]" << endl;
 		}
+	}
+
+	//Metodo getting
+	int getTamanho () {
+		return this->tamanho;
+	}
+
+	int getArrayElemento (int pos) {
+		if(pos < 0 && pos >= tamanho) {
+			exit(0);
+		}
+		return this->array[pos];
+	}
+
+	bool lista_vazia () {
+		if (tamanho == 0) {
+			return true;
+		}
+
+		return false;
 	}
 };
