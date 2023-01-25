@@ -1,6 +1,6 @@
 # Fila
 
-## Códigos disponiveis
+## Códigos disponíveis
 
 ### Fila Estática
 

@@ -1,6 +1,6 @@
 # Lista
 
-## Códigos disponiveis
+## Códigos disponíveis
 
 ### Lista Estática
 
