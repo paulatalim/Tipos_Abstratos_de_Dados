@@ -53,7 +53,7 @@ public:
         return retornar;
     }
 
-    void mostrarFila () {
+    void exibir () {
         Celula *aux = prim;
         while (aux != NULL) {
             printf("%d", aux->elemento);

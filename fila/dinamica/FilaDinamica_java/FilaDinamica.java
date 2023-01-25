@@ -12,17 +12,7 @@ public class FilaDinamica {
         tamanho = 0;
     }
 
-    //destrutor
-    // ~FilaDinamica () {
-    //     Celula aux;
-    //     while (prim != null) {
-    //         aux = prim;
-    //         prim = prim.prox;
-    //         aux = null;
-    //     }
-    // }
-
-    public void inserir (int x) {
+    public void enfileirar (int x) {
         ult.prox = new Celula();
         ult = ult.prox;
         ult.elemento = x;
@@ -30,7 +20,7 @@ public class FilaDinamica {
         tamanho++;
     }
 
-    public int remover () throws Exception {
+    public int desenfileirar () throws Exception {
         if (prim.prox == null) {
             throw new Exception("Erro");
         }
@@ -43,7 +33,7 @@ public class FilaDinamica {
         return retornar;
     }
 
-    public void mostrarFila () {
+    public void exibir () {
         Celula aux;
         aux = prim;
         while (aux != null) {
