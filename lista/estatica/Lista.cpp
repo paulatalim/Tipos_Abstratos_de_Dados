@@ -4,57 +4,57 @@ using namespace std;
 
 class Lista {
 private:
-    int n;
+    int tamanho;
 	int array[10];
 	
 public:
 	//Construtor
 	Lista () {
-		n = 0;
+		tamanho = 0;
 	}
 	
 	//Metodo setting
 	void setArray (int pos, int num) {
-		if (pos < n - 1 && pos >= 0) {
+		if (pos < tamanho - 1 && pos >= 0) {
 			this->array[pos] = num;
 		}
 	}
 	
 	//Metodo getting
-	int getN () {
-		return this->n;
+	int getTamanho () {
+		return this->tamanho;
 	}
 
 	int getArrayElemento (int pos) {
-		if(pos < 0 && pos >= n) {
+		if(pos < 0 && pos >= tamanho) {
 			exit(0);
 		}
 		return this->array[pos];
 	}
 	
 	void inserirInicio (int num) {
-		for (int i = n; i > 0; i--) {
+		for (int i = tamanho; i > 0; i--) {
 			array[i] = array[i-1];
 		}
 		
 		//Atualizacao do limite do vetor
-		this->n++;
+		tamanho++;
 		
 		//Insercao do novo num
-		this->array[0] = num;
+		array[0] = num;
 	}
 	
 	void inserirFinal (int num) {
-		array[n++] = num;
+		array[tamanho++] = num;
 	}
 	
 	void inserir (int pos, int num) {
-		for (int i = n; i > pos; i--) {
+		for (int i = tamanho; i > pos; i--) {
 			array[i] = array[i-1];
 		}
 		
 		//Atualizacao do limite do vetor
-		n++;
+		tamanho++;
 		
 		//Insercao do novo num
 		array[pos] = num;
@@ -63,9 +63,9 @@ public:
 	int removerInicio () {
 		int num_removido = array[0];
 
-		n--;
+		tamanho--;
 
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < tamanho; i++) {
 			array[i] = array [i+1];
 		}
 		
@@ -73,16 +73,16 @@ public:
 	}
 	
 	int removerFinal ()  {
-		n--;
-		return array[n];
+		tamanho--;
+		return array[tamanho];
 	}
 
 	int remover (int pos)  {
 		int num_removido = array[pos];
 
-		n--;
+		tamanho--;
 
-		for (int i = pos; i < n; i++) {
+		for (int i = pos; i < tamanho; i++) {
 			array[i] = array [i+1];
 		}
 
@@ -95,11 +95,11 @@ public:
      */
 	void exibir () {
 		cout << "[ ";
-		if (n != 0) {
-			for (int i = 0; i < n-1; i++) {
+		if (tamanho != 0) {
+			for (int i = 0; i < tamanho-1; i++) {
 				cout << array[i] << ", ";
 			}
-			cout << array[n-1] << " ]" << endl;
+			cout << array[tamanho-1] << " ]" << endl;
 		}
 	}
 };
