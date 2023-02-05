@@ -60,4 +60,12 @@ public class Pilha {
 	public int getTamanho () {
 		return tamanho;
 	}
+
+    public boolean pilha_vazia () {
+        if (tamanho == 0) {
+            return true;
+        }
+
+        return false;
+    }
 }
