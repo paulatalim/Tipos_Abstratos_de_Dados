@@ -67,4 +67,12 @@ public class Fila {
 	public int getTamanho () {
 		return tamanho;
 	}
+
+	public boolean fila_vazia () {
+		if (tamanho == 0) {
+			return true;
+		}
+
+		return false;
+	}
 }
