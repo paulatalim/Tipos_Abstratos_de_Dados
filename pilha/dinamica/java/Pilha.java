@@ -40,9 +40,42 @@ public class Pilha {
 		System.out.println();
 	}
 
-	// public void tamanho () {
-	// 	System.out.println("Tamanho da pilha: " + tamanho);
-	// }
+	public void setElemento (int pos, int num) throws Exception {
+		if (pos < 0 || pos >= tamanho) {
+			throw new Exception("Erro: posicao invalida");
+		} else {
+			Celula aux = topo.prox;
+			int cont = 0;
+
+			while (cont < pos) {
+				aux = aux.prox;
+				cont ++;
+			}
+
+			aux.elemento = num;
+			aux = null;
+		}
+	}
+
+	public int getElemento (int pos) throws Exception {
+		if (pos < 0 || pos >= tamanho) {
+			throw new Exception("Erro: posicao invalida");
+		} else {
+			Celula aux = topo.prox;
+			int cont = 0;
+
+			while (cont < pos) {
+				aux = aux.prox;
+				cont++;
+			}
+
+			return aux.elemento;
+		}
+	}
+
+	public int getTamanho () {
+		return tamanho;
+	}
 
 	public boolean pilha_vazia () {
 		if (topo == null) {
@@ -50,8 +83,4 @@ public class Pilha {
 		}
 		return false;
 	}
-
-	//setElemento
-	//getElemento
-	//getTamanho
 }
