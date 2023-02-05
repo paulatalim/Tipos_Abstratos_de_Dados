@@ -17,16 +17,20 @@ public class Pilha {
 		tamanho++;
 	}
 	
-	public int desempilhar () {
-		Celula aux = topo;
-		int elemento = topo.elemento;
-		
-		topo = topo.prox;
-		aux = aux.prox;
-		
-		aux = null;
-		tamanho--;
-		return elemento;
+	public int desempilhar () throws Exception {
+		if (tamanho == 0) {
+			throw new Exception("Erro: pilha vazia");
+		} else {
+			Celula aux = topo;
+			int elemento = topo.elemento;
+			
+			topo = topo.prox;
+			aux = aux.prox;
+			
+			aux = null;
+			tamanho--;
+			return elemento;
+		}
 	}
 	
 	public void exibir () {
@@ -44,7 +48,7 @@ public class Pilha {
 		if (pos < 0 || pos >= tamanho) {
 			throw new Exception("Erro: posicao invalida");
 		} else {
-			Celula aux = topo.prox;
+			Celula aux = topo;
 			int cont = 0;
 
 			while (cont < pos) {
@@ -61,7 +65,7 @@ public class Pilha {
 		if (pos < 0 || pos >= tamanho) {
 			throw new Exception("Erro: posicao invalida");
 		} else {
-			Celula aux = topo.prox;
+			Celula aux = topo;
 			int cont = 0;
 
 			while (cont < pos) {
@@ -78,7 +82,7 @@ public class Pilha {
 	}
 
 	public boolean pilha_vazia () {
-		if (topo == null) {
+		if (tamanho == 0) {
 			return true;
 		}
 		return false;
