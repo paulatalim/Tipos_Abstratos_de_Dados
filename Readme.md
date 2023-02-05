@@ -5,6 +5,9 @@
 - [Pilha](./pilha)
 - [Fila](./fila)
 
+<!-- ## Implantação do código
+## Clonar repo -->
+
 ## Créditos
 Esse repositório foi feito com muito carinho por mim, Paula Talim, me acompanhe no:
 
