@@ -26,4 +26,4 @@
 - `fila_vazia ()`
 
 ### Métodos exclusivos do código em C++
-- `~Fila()` - destrutor
+- `~Fila()`

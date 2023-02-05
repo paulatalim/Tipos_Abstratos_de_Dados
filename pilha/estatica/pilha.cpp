@@ -4,62 +4,58 @@ using namespace std;
 
 class Pilha {
 private:
-    int n;
+    int tamanho;
     int array[10];
 
 public:
 
     //Construtor
     Pilha () {
-        this->n = 0;
+        tamanho = 0;
+    }
+
+    ~Pilha () {
+        tamanho = 0;
     }
 
     //Metodos setting
-    void setN (int n) {
-        // if (n >= array.length) {
-        //     throw new Exception ("Erro");
-        // }
-        
-        this->n = n;
-    }
-
-    void setArray (int pos, int num) {
+    void setElemento (int pos, int num) {
         // if (pos < 0 || pos >= n) {
         //     throw new Exception ("Erro");
         // }
 		
-		this->array[pos] = num;
+		array[pos] = num;
 	}
 	
 	//Metodo getting
-	int getN () {
-		return this->n;
+	int getTamanho () {
+		return tamanho;
 	}
 
-	int getArrayElemento (int pos) {
+	int getElemento (int pos) {
         // if (pos < 0 || pos >= n) {
         //     throw new Exception ("Erro");
         // }
 
-		return this->array[pos];		
+		return array[pos];		
 	}
     
-    void inserir (int num) {
+    void empilhar (int num) {
 		// if (n >= array.length) {
 		// 	throw new Exception ("Erro");
 		// }
 		
-        this->array[this->n] = num;
-        this->n++;
+        array[tamanho] = num;
+        tamanho++;
     }
 
-    int remover () {
+    int desempilhar () {
 		// if (this.n == 0) {
 		// 	throw new Exception ("Erro");
 		// }
 
-        n--;
-        return array[n];
+        tamanho--;
+        return array[tamanho];
     }
 
     /*
@@ -78,4 +74,16 @@ public:
 
 		cout << " ]" << endl;
 	}
+
+    bool pilha_vazia () {
+        if (tamanho == 0) {
+            return true;
+        }
+
+        return false;
+    }
+
+    int getTamanho () {
+        return tamanho;
+    }
 };

@@ -29,7 +29,7 @@ public class Pilha {
 		return elemento;
 	}
 	
-	public void mostrar () {
+	public void exibir () {
 		Celula aux = topo;
 
 		while (aux != null) {
@@ -40,24 +40,18 @@ public class Pilha {
 		System.out.println();
 	}
 
-	public void tamanho () {
-		System.out.println("Tamanho da pilha: " + tamanho);
-	}
+	// public void tamanho () {
+	// 	System.out.println("Tamanho da pilha: " + tamanho);
+	// }
 
-	public boolean pilhaVazia () {
+	public boolean pilha_vazia () {
 		if (topo == null) {
 			return true;
 		}
 		return false;
 	}
 
-	public int soma () {
-		int soma = 0;
-
-		while (pilhaVazia() == false) {
-			soma += desempilhar();
-		}
-
-		return soma;
-	}
+	//setElemento
+	//getElemento
+	//getTamanho
 }
