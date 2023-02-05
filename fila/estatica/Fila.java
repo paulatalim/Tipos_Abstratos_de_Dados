@@ -1,58 +1,58 @@
 public class Fila {
-    private int n;
+    private int tamanho;
     private int[] array;
 
     //Construtor
     public Fila (int tam) {
-        this.n = 0;
-        this.array = new int[tam]; 
+        tamanho = 0;
+        array = new int[tam]; 
     }
 
     //Metodos setting
-    public void setArray (int pos, int num) throws Exception {
-        if (pos < 0 || pos >= n) {
+    public void setElemento (int pos, int num) throws Exception {
+        if (pos < 0 || pos >= tamanho) {
             throw new Exception ("Erro");
         }
 		
-		this.array[pos] = num;
+		array[pos] = num;
 	}
 	
 	//Metodo getting
-	public int getN () {
-		return this.n;
+	public int getTamanho () {
+		return tamanho;
 	}
 
-	public int getArrayElemento (int pos) throws Exception {
-        if (pos < 0 || pos >= n) {
+	public int getElemento (int pos) throws Exception {
+        if (pos < 0 || pos >= tamanho) {
             throw new Exception ("Erro");
         }
 
-		return this.array[pos];		
+		return array[pos];		
 	}
     
-    public void inserir (int num) throws Exception {
-        if (n >= array.length) {
+    public void enfileirar (int num) throws Exception {
+        if (tamanho >= array.length) {
 			throw new Exception ("Erro");
 		}
 
-		for (int i = this.n; i > 0; i--) {
-			this.array[i] = this.array[i-1];
+		for (int i = tamanho; i > 0; i--) {
+			array[i] = array[i-1];
 		}
 		
 		//Atualizacao do limite do vetor
-		n++;
+		tamanho++;
 		
 		//Insercao do novo num
-		this.array[0] = num;
+		array[0] = num;
 	}
 
-    public int remover () throws Exception {
-        if (this.n == 0) {
+    public int denfileirar () throws Exception {
+        if (tamanho == 0) {
 			throw new Exception ("Erro");
 		}
         
-		this.n--;
-		return this.array[n];
+		tamanho--;
+		return array[tamanho];
 	}
 
     /*
@@ -61,11 +61,11 @@ public class Fila {
     */
 	public void exibir () {
 		System.out.print("[ ");
-		if (n != 0) {
-			for (int i = 0; i < this.n-1; i++) {
-				System.out.print(this.array[i] + ", ");
+		if (tamanho != 0) {
+			for (int i = 0; i < tamanho-1; i++) {
+				System.out.print(array[i] + ", ");
 			}
-			System.out.print(this.array[this.n-1]);
+			System.out.print(array[tamanho-1]);
 		}
 		System.out.println(" ]");
 	}
