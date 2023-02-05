@@ -17,7 +17,7 @@
 
 ## Métodos disponíveis
 - `Fila()`
-- `enfileirar (int x)`
+- `enfileirar (int num)`
 - `desenfileirar ()`
 - `exibir ()`
 - `setElemento (int pos, int num)`

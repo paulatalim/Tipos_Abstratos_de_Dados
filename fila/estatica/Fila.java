@@ -8,29 +8,7 @@ public class Fila {
         array = new int[tam]; 
     }
 
-    //Metodos setting
-    public void setElemento (int pos, int num) throws Exception {
-        if (pos < 0 || pos >= tamanho) {
-            throw new Exception ("Erro");
-        }
-		
-		array[pos] = num;
-	}
-	
-	//Metodo getting
-	public int getTamanho () {
-		return tamanho;
-	}
-
-	public int getElemento (int pos) throws Exception {
-        if (pos < 0 || pos >= tamanho) {
-            throw new Exception ("Erro");
-        }
-
-		return array[pos];		
-	}
-    
-    public void enfileirar (int num) throws Exception {
+	public void enfileirar (int num) throws Exception {
         if (tamanho >= array.length) {
 			throw new Exception ("Erro");
 		}
@@ -68,5 +46,25 @@ public class Fila {
 			System.out.print(array[tamanho-1]);
 		}
 		System.out.println(" ]");
+	}
+
+    public void setElemento (int pos, int num) throws Exception {
+        if (pos < 0 || pos >= tamanho) {
+            throw new Exception ("Erro");
+        }
+		
+		array[pos] = num;
+	}
+	
+	public int getElemento (int pos) throws Exception {
+        if (pos < 0 || pos >= tamanho) {
+            throw new Exception ("Erro");
+        }
+
+		return array[pos];		
+	}
+
+	public int getTamanho () {
+		return tamanho;
 	}
 }
