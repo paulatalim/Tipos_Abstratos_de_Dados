@@ -18,25 +18,25 @@ public:
         tamanho = 0;
     }
 
-void empilhar (int num) {
-		// if (n >= array.length) {
-		// 	throw new Exception ("Erro");
-		// }
+    void empilhar (int num) {
+		if (tamanho >= array.length) {
+			exit(0);
+		}
 		
         array[tamanho] = num;
         tamanho++;
     }
 
     int desempilhar () {
-		// if (this.n == 0) {
-		// 	throw new Exception ("Erro");
-		// }
+		if (tamanho == 0) {
+			exit(0);
+		}
 
         tamanho--;
         return array[tamanho];
     }
 
-        /*
+    /*
     * Descricao: essa funcao exibe os numeros de um vetor de inteiros
     * Parametro: um vetor de inteiros (vetor a ser exibido)
     */
@@ -54,9 +54,9 @@ void empilhar (int num) {
 	}
 
     void setElemento (int pos, int num) {
-        // if (pos < 0 || pos >= n) {
-        //     throw new Exception ("Erro");
-        // }
+        if (pos < 0 || pos >= tamanho) {
+            exit(0);
+        }
 		
 		array[pos] = num;
 	}
