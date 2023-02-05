@@ -4,7 +4,7 @@
 
 Esse repósitório foi criado apartir da matéria de Algoritmos e Estrutura de Dados 2, a qual ensina, em Tipos Abstratos de Dados, uma manipulação mais fácil e eficiente de vetores.
 
-Neste repositório possui 3 maneiras de se menipular o vetor, contendo em cada suas variações e códigos em C++ e Java.
+Neste repositório possui 3 maneiras de se menipular um vetor, contendo em cada suas variações e códigos em C++ e Java.
 
 ## Códigos disponíveis
 - [Lista](./lista)
