@@ -4,7 +4,6 @@
 
 ### Códigos disponíveis
 
-- C (em breve)
 - C++ (em breve)
 - [Java](./estatica/Fila.java)
 

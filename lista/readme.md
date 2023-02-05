@@ -3,7 +3,7 @@
 ## Lista Estática
 
 ### Códigos disponíveis
-- C (em breve)
+
 - [C++](./estatica/Lista.cpp)
 - [Java](./estatica/Lista.java)
 
@@ -41,4 +41,4 @@
 - `lista_vazia ()`
 
 ### Metodo Exclusivos dos Arquivos C++
-- `~Lista` - destrutor
+- `~Lista`
