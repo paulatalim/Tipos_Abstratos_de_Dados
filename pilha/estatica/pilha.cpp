@@ -18,29 +18,7 @@ public:
         tamanho = 0;
     }
 
-    //Metodos setting
-    void setElemento (int pos, int num) {
-        // if (pos < 0 || pos >= n) {
-        //     throw new Exception ("Erro");
-        // }
-		
-		array[pos] = num;
-	}
-	
-	//Metodo getting
-	int getTamanho () {
-		return tamanho;
-	}
-
-	int getElemento (int pos) {
-        // if (pos < 0 || pos >= n) {
-        //     throw new Exception ("Erro");
-        // }
-
-		return array[pos];		
-	}
-    
-    void empilhar (int num) {
+void empilhar (int num) {
 		// if (n >= array.length) {
 		// 	throw new Exception ("Erro");
 		// }
@@ -58,7 +36,7 @@ public:
         return array[tamanho];
     }
 
-    /*
+        /*
     * Descricao: essa funcao exibe os numeros de um vetor de inteiros
     * Parametro: um vetor de inteiros (vetor a ser exibido)
     */
@@ -75,15 +53,31 @@ public:
 		cout << " ]" << endl;
 	}
 
+    void setElemento (int pos, int num) {
+        // if (pos < 0 || pos >= n) {
+        //     throw new Exception ("Erro");
+        // }
+		
+		array[pos] = num;
+	}
+	
+    int getElemento (int pos) {
+        if (pos < 0 || pos >= tamanho) {
+            exit(0);
+        }
+
+		return array[pos];		
+	}
+
+	int getTamanho () {
+		return tamanho;
+	}
+
     bool pilha_vazia () {
         if (tamanho == 0) {
             return true;
         }
 
         return false;
-    }
-
-    int getTamanho () {
-        return tamanho;
     }
 };
