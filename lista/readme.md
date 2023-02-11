@@ -2,20 +2,15 @@
 
 ## Lista Estática
 
-### Códigos disponíveis
-
 - [C++](./estatica/Lista.cpp)
 - [Java](./estatica/Lista.java)
 
 ## Lista Dinâmica Simples
 
-### Códigos disponíveis
 - [C++](./dinamica/ListaSimples.cpp)
 - Java (em breve)
 
 ## Lista Dinâmica Duplamente encadeada
-
-### Códigos disponíveis
 
 - C++ (em breve)
 - [Java](./dinamica/listaDuplaJava)
@@ -40,5 +35,5 @@
 - `getTamanho ()`
 - `lista_vazia ()`
 
-### Metodo Exclusivos dos Arquivos C++
+### Método Exclusivos dos Arquivos C++
 - `~Lista`

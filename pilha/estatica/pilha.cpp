@@ -19,7 +19,7 @@ public:
     }
 
     void empilhar (int num) {
-		if (tamanho >= array.length) {
+		if (tamanho >= 10) {
 			exit(0);
 		}
 		
@@ -43,11 +43,11 @@ public:
 	void exibir () {
 		cout << "[ ";
 
-		if (n != 0) {
-			for (int i = 0; i < n-1; i++) {
+		if (tamanho != 0) {
+			for (int i = 0; i < tamanho-1; i++) {
 				cout << array[i] << ", ";
 			}
-			cout << array[n-1];
+			cout << array[tamanho-1];
 		}
 
 		cout << " ]" << endl;
