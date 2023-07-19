@@ -20,7 +20,7 @@ Para implatar os códigos nesse repositório, basta copiar e  colar eles em seus
 Caso queira clonar esse repositório, coloque os seguintes comandos em seu git bash
 
 ``` 
-git clone https://github.com/Paula-Talim/Tipos_Abstratos_de_Dados.git
+git clone https://github.com/paulatalim/Tipos_Abstratos_de_Dados.git
 ```
 
 ```
